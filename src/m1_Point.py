@@ -119,6 +119,10 @@ class Point(object):
         self.x = x
         self.y = y
 
+    def __repr__(self):
+        #value = "Point" + '(' + self.x + ',' + self.y + ')'
+        value = "Point (" + str(self.x) + ',' + str(self.y) + ')'
+        return value
 
 
     # -------------------------------------------------------------------------
@@ -170,24 +174,7 @@ def run_test_repr():
     EXAMPLE: The following shows   __repr__   in action.
     You may also use this example to test this method.
 
-        p1 = Point(30, 18)
-        print()
-        print('Expected for p1: Point(30, 18)')
-        print('Actual for p1:  ', p1)
 
-        p2 = Point(100, -40)
-        print()
-        print('Expected for p2: Point(100, -40)')
-        print('Actual for p2:  ', p2)
-        print('Expected for p1: Point(30, 18)')
-        print('Actual for p1:  ', p1)
-
-        p1.y = 999
-        print()
-        print('Expected for p1: Point(30, 999)')
-        print('Actual for p1:  ', p1)
-        print('Expected for p2: Point(100, -40)')
-        print('Actual for p2:  ', p2)
     """
     # -------------------------------------------------------------------------
     # TODO: 4.  Follow the same instructions as in _TODO_ 3 above,
@@ -197,6 +184,26 @@ def run_test_repr():
     print('-----------------------------------------------------------')
     print('Testing the   __repr__   method of the Point class.')
     print('-----------------------------------------------------------')
+    p1 = Point(30, 18)
+    print()
+    print('Expected for p1: Point(30, 18)')
+    print('Actual for p1:  ', p1)
+
+    p2 = Point(100, -40)
+    print()
+    print('Expected for p2: Point(100, -40)')
+    print('Actual for p2:  ', p2)
+    print('Expected for p1: Point(30, 18)')
+    print('Actual for p1:  ', p1)
+
+    p1.y = 999
+    print()
+    print('Expected for p1: Point(30, 999)')
+    print('Actual for p1:  ', p1)
+    print('Expected for p2: Point(100, -40)')
+    print('Actual for p2:  ', p2)
+
+
 
 
 def run_test_clone():
